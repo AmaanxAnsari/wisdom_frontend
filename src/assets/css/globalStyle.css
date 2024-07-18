@@ -1,0 +1,121 @@
+.sp_top_100 {
+    padding-top: 100px !important;
+}
+
+.container-fluid.full__width__padding {
+    padding: 0px 120px;
+}
+
+.dashboardarea__img {
+    position: relative;
+    z-index: 2;
+}
+
+.dashboardarea__inner.student__dashboard__inner {
+    background: #03a9f4;
+}
+
+.dashboardarea__inner {
+    background-color: #03a9f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+.dashboardarea__left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dashboardarea__left__img {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}
+
+.dashboardarea__left__img img {
+    width: 100%;
+    border-radius: 100%;
+    border: 2px solid #c4c4c4;
+    padding: 4px;
+}
+
+.dashboardarea__left__content h4 {
+    margin: 0;
+    margin-bottom: 0;
+    line-height: 1.24;
+    color: #ffffff;
+}
+
+.dashboardarea__left__content ul {
+    margin-top: 5px;
+}
+
+.dashboardarea__left__content ul li {
+    color: #ffffff;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.dashboardarea__left__content ul li svg {
+    width: 18px;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+/* li {
+    list-style: none;
+    display: inline-block;
+} */
+
+h4 {
+    font-weight: 700;
+    font-family: "Hind", sans-serif;
+
+}
+
+.default__button {
+    padding: 10px 25px;
+    background-color: #5f2ded;
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 15px;
+    border: 1px solid #5f2ded;
+}
+
+.dashboardarea__inner.student__dashboard__inner .default__button {
+    background-color: #f2277e;
+    border: 1px solid #f2277e;
+}
+
+.p-150 {
+    padding: 0px 60px;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 150px;
+}
+
+.student_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    margin-bottom: 0px !important;
+}

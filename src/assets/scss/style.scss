@@ -1,0 +1,519 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+==========================================================================================================================================
+Project                        :   Sash – React Bootstrap Admin & Dashboard Template
+==========================================================================================================================================
+Create Date                    :   09/08/2022
+------------------------------------------------------------------------------------------------------------------------------------------
+Updated Date                   :   06/03/2023
+------------------------------------------------------------------------------------------------------------------------------------------
+Author & Copyright Ownership   :   Spruko Technologies Private Limited 
+------------------------------------------------------------------------------------------------------------------------------------------
+Author URL                     :   https://themeforest.net/user/spruko
+------------------------------------------------------------------------------------------------------------------------------------------
+Support		                   :   https://support.spruko.com/
+------------------------------------------------------------------------------------------------------------------------------------------
+License Details                :   https://spruko.com/licenses-details
+------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------*/
+/*
+--- bootstrap-styles
+--- accordion
+--- alert
+--- avatars
+--- badges
+--- blackquote
+--- breadcrumb
+--- button
+--- buttons
+--- cards
+--- carousel
+--- dropdown
+--- forms
+--- grid
+--- input-group
+--- modal
+--- navigation
+--- pagination
+--- panel
+--- popover
+--- progress
+--- tables
+--- tags
+--- thumbnail
+--- tooltip
+--- accordion
+--- calendar
+--- fullcalendar
+--- leaflet
+--- owl.carousel
+--- perfect-scrollbar
+--- components-col
+--- custom-forms
+--- custom-styles
+--- file-manager
+--- font
+--- gallery
+--- highlight
+--- labels
+--- list-group
+--- media
+--- navbar
+--- pricing
+--- rating
+--- tabs-menu
+--- timeline
+--- footer
+--- header
+--- horizontal-menu
+--- icons-list
+--- loaders
+--- rtl
+--- default-menu
+--- sidemenu-icontext
+--- closed-menu
+--- hover-submenu
+--- hover-submenu-style1
+--- calender
+--- chart
+--- chat
+--- error-pages
+--- range
+--- ribbon
+--- form-wizard
+--- widgets
+--- alignments
+--- background
+--- border
+--- display
+--- float-elements
+--- height
+--- margin
+--- padding
+--- position
+--- typography
+--- width
+*/
+
+/* ######## FONT ######## */
+
+@import "custom/Fonts/fonts";
+
+/* ######## BOOTSTRAP ######## */
+
+@import "variables";
+@import "bootstrap/bootstrap-styles";
+@import "bootstrap/accordion";
+@import "bootstrap/alert";
+@import "bootstrap/avatars";
+@import "bootstrap/badges";
+@import "bootstrap/blackquote";
+@import "bootstrap/breadcrumb";
+@import "bootstrap/button";
+@import "bootstrap/buttons";
+@import "bootstrap/cards";
+@import "bootstrap/carousel";
+@import "bootstrap/dropdown";
+@import "bootstrap/forms";
+@import "bootstrap/grid";
+@import "bootstrap/input-group";
+@import "bootstrap/modal";
+@import "bootstrap/navigation";
+@import "bootstrap/pagination";
+@import "bootstrap/panel";
+@import "bootstrap/popover";
+@import "bootstrap/progress";
+@import "bootstrap/tables";
+@import "bootstrap/tags";
+@import "bootstrap/thumbnail";
+@import "bootstrap/tooltip";
+@import "bootstrap/ribbons";
+
+/* ######## plugins-STYLES ######## */
+
+@import "plugins/accordion";
+@import "plugins/calendar";
+@import "plugins/fullcalendar";
+@import "plugins/leaflet";
+@import "plugins/owl.carousel";
+@import "plugins/perfect-scrollbar";
+@import "plugins/sidebar";
+
+/*  ######## CUSTOM-STYLES ######## */
+
+@import "custom/components-col";
+@import "custom/custom-forms";
+@import "custom/custom-styles";
+@import "custom/file-manager";
+@import "custom/font";
+@import "custom/gallery";
+@import "custom/highlight";
+@import "custom/labels";
+@import "custom/landing";
+@import "custom/list-group";
+@import "custom/media";
+@import "custom/navbar";
+@import "custom/pricing";
+@import "custom/rating";
+@import "custom/tabs-menu";
+@import "custom/timeline";
+@import "custom/bootstrap-input-spinner";
+
+/* ######## LAYOUT-STYLES ######## */
+
+@import "layouts/footer";
+@import "layouts/header";
+@import "layouts/horizontal-menu";
+@import "layouts/icons-list";
+@import "layouts/loaders";
+@import "layouts/rtl";
+
+
+/* ######## SIDEMENU-STYLES ######## */
+
+@import "sidemenu/default-menu";
+@import "sidemenu/sidemenu-icontext";
+@import "sidemenu/closed-menu";
+@import "sidemenu/hover-submenu";
+@import "sidemenu/hover-submenu-style1";
+
+/* ######## TEMPLATE-STYLES ######## */
+
+@import "template/calender";
+@import "template/chart";
+@import "template/chat";
+@import "template/error-pages";
+@import "template/range";
+@import "template/ribbon";
+@import "template/form-wizard";
+@import "template/widgets";
+
+/* ######## UTILITIES-STYLES ######## */
+
+@import "utilities/alignments";
+@import "utilities/background";
+@import "utilities/border";
+@import "utilities/display";
+@import "utilities/float-elements";
+@import "utilities/height";
+@import "utilities/margin";
+@import "utilities/padding";
+@import "utilities/position";
+@import "utilities/typography";
+@import "utilities/width";
+
+
+
+
+/* licenses */
+.tx-26 {
+    font-size: 26px;
+}
+
+.tx-14 {
+    font-size: 14px;
+}
+
+.tx-12 {
+    font-size: 12px;
+}
+
+.font-weight-semibold {
+    font-weight: 500;
+}
+
+.w-50 {
+    width: 50% !important;
+}
+
+.w-55 {
+    width: 50% !important;
+}
+
+.w-xs {
+    min-width: 90px;
+}
+
+.w-sm {
+    min-width: 110px;
+}
+
+.w-md {
+    min-width: 130px;
+}
+
+.w-lg {
+    min-width: 150px;
+}
+
+.w-xl {
+    min-width: 190px;
+}
+
+.buynow .money-bag,
+.free-img {
+    margin: 0 auto;
+    display: block;
+    margin-top: -20px;
+}
+
+.buynow .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.45rem .80rem;
+    clear: both;
+    font-weight: 400;
+    color: #576074;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    font-size: 15px;
+}
+
+.buynow .dropdown-item:hover {
+    background-color: #f5f4ff !important;
+}
+
+.buynow .btn {
+    padding: 0.375rem 0.75rem;
+}
+
+.buynow .dropdown-menu {
+    border-radius: 5px !important;
+    background-color: #ffffff;
+    border: 1px solid #ffffff8a;
+    box-shadow: 0 0px 90px rgb(155 153 153 / 48%) !important;
+}
+
+.buynow .card-block {
+    border: 1px solid rgb(231 229 245 / 11%) !important;
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(255 255 255 / 6%);
+    top: 0;
+    bottom: 0;
+    background: #6a1cbb69;
+    left: 0;
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset-inline-end: 0;
+    bottom: 0;
+    inset-inline-start: 0;
+}
+
+@media (max-width: 480px) {
+    .buynow .card .btn {
+        display: initial !important;
+    }
+}
+
+.buynow.modal .btn-close:focus {
+    box-shadow: none;
+}
+
+.buynow .buynowbg-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #000000a8;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    outline: 0;
+}
+
+.buynow .modal-body {
+    position: absolute;
+    /* height: 100%; */
+}
+
+.buynow .modal-dialog .image-top {
+    margin-top: -10px !important;
+}
+
+.buynow .modal-dialog .card-block {
+    background: #6a1cbbbf;
+}
+
+.buynow .regular-license {
+    z-index: 9;
+}
+
+.border-0 {
+    border: 0px !important;
+}
+
+.modal .modal-header {
+    padding: 10px 20px;
+}
+
+@media (max-width: 480px) {
+    .buynow .modal-dialog .modal-body {
+        margin: 15px;
+    }
+}
+
+.buynow .modal-dialog .btn-close {
+    position: absolute;
+    float: right;
+    margin-right: auto;
+    right: 33px;
+    top: 30px;
+    padding: 7px;
+    background-image: none;
+    border: 1px solid #ffffff47;
+    border-radius: 5px;
+    line-height: 1;
+}
+
+.buynow .modal-dialog .btn-close span {
+    color: #fff;
+    font-size: 24px;
+    padding: 9px 0px;
+    line-height: .6;
+}
+
+.lh-xs {
+    line-height: 0.75 !important;
+    margin-top: 6px;
+}
+
+.buynow .license-view {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.buynow .license-view a {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.buynow .license-view a:hover {
+    padding: 10px;
+    background-color: rgb(255 255 255 / 12%);
+    border-radius: 5px;
+}
+
+.bg-image-style {
+    background-image: url(../images/landing/bg3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    position: relative;
+    border-radius: 0px;
+}
+
+.bg-image-style::before {
+    content: "";
+    background-color: #ffffffa6;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0;
+    position: absolute;
+}
+
+.buynow .modal-backdrop {
+    background-color: #000000b8;
+}
+
+.buynow .card-body.imag-list {
+    overflow: visible;
+}
+
+.buynow .modal-content {
+    background-color: #0000008c;
+}
+
+.buynow .imag-list {
+    position: relative;
+    content: "";
+    left: 0;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+.buynow .imag-list::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 7px;
+    position: absolute;
+    background: #6a1cbb82;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.buynow .buynowbg-image {
+    z-index: -1;
+    border: 0px #000 solid !important;
+}
+
+.buynow .buynowbg-image::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 1rem;
+    position: absolute;
+    background: #000000b3;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.buynow .Licenses-img {
+    border: 1px solid #ffffff2e;
+    border-radius: 7px;
+    /* height: 100%; */
+}
+
+.modal.buynow .modal-body .card {
+    background: transparent;
+
+}
+
+.buynow .modal-content-demo::before {
+    content: "";
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 1rem;
+    position: absolute;
+    background: #000000b3;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.modal-content-demo {
+    overflow: hidden;
+    border-radius: 1rem;
+    z-index:-1;
+}

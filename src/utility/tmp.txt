@@ -1,0 +1,94 @@
+import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
+import * as cheerio from "cheerio";
+
+export async function createPdf(studentDetails, course) {
+  console.log("course ", course);
+  const pngUrl = "https://i.imgur.com/iGLFQZo.png";
+  const html = `<h2> For successfully completing the "${course.name}" Course </h2><br>
+  <p> at Wisdom Sprouts - It Training Hub, Pune. from “2nd January 2023 “to “31st March 2023“</p><br>
+  <p>Her performance has been satisfactory so as to fulfill the requirements </p><br>
+  <p>for successful completion of the training.</p><br>
+  <p>In testimony thereof, this certificate is awarded on the 31st of March, 2023.</p>`;
+  const $ = cheerio.load(html);
+  const plainText = $.text();
+
+  const pdfDoc = await PDFDocument.create();
+  const timesRomanFont = await pdfDoc.embedFont(StandardFonts.TimesRoman);
+
+  const page = pdfDoc.addPage([1000, 770]);
+  const { width, height } = page.getSize();
+  const fontSize = 36;
+
+  const pngImageBytes = await fetch(pngUrl).then((res) => res.arrayBuffer());
+
+  const pngImage = await pdfDoc.embedPng(pngImageBytes);
+
+  const pngDims = pngImage.scale(0.5);
+
+  page.drawImage(pngImage, {
+    x: page.getWidth() / 2 - pngDims.width / 2,
+    y: page.getHeight() / 2 - pngDims.height + 385,
+    width: pngDims.width,
+    height: pngDims.height,
+  });
+  page.drawText(studentDetails.firstName, {
+    x: width / 2 - fontSize - 50,
+    y: height - 4 * fontSize - 250,
+    size: fontSize,
+    font: timesRomanFont,
+    color: rgb(0, 0, 0),
+  });
+  const courseSize = 18;
+  const drawTextOptions = {
+    x: width / 2 - courseSize - 50,
+    y: height - 4 * courseSize - 368,
+    size: courseSize,
+    font: timesRomanFont,
+    color: rgb(0, 0, 0),
+  };
+  page.drawText(plainText, drawTextOptions);
+  const dateSize = 18;
+  // page.drawText(" 2ND JANUARY TO 31ST MARCH ", {
+  //   x: dateSize + 550,
+  //   y: height - 4 * dateSize - 405,
+  //   size: dateSize,
+  //   font: timesRomanFont,
+  //   color: rgb(0, 0, 0),
+  // });
+  // const endDateSize = 18;
+  // page.drawText("31 ST OF MARCH, 2023 ", {
+  //   x: endDateSize + 675,
+  //   y: height - 4 * endDateSize - 510,
+  //   size: endDateSize,
+  //   font: timesRomanFont,
+  //   color: rgb(0, 0, 0),
+  // });
+  const idSize = 18;
+  page.drawText(" WS230327", {
+    x: dateSize + 820,
+    y: height - 4 * idSize - 680,
+    size: idSize,
+    font: timesRomanFont,
+    color: rgb(0, 0, 0),
+  });
+
+  const pdfBytes = await pdfDoc.save();
+
+  // Create a Blob from the PDF bytes
+  const pdfBlob = new Blob([pdfBytes], { type: "application/pdf" });
+  const pdfUrl = URL.createObjectURL(pdfBlob);
+  return pdfUrl;
+
+  // // Create a download link
+  // const downloadLink = document.createElement("a");
+  // downloadLink.href = URL.createObjectURL(pdfBlob);
+  // downloadLink.download = "modified_certificate.pdf";
+
+  // // Append the link to the document and trigger the click event
+  // document.body.appendChild(downloadLink);
+  // downloadLink.click();
+
+  // // Clean up
+  // document.body.removeChild(downloadLink);
+  // URL.revokeObjectURL(downloadLink.href);
+}
